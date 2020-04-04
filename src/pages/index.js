@@ -131,7 +131,7 @@ const IndexPage = () => {
         <pre>
           <code>More to come!</code>
         </pre>
-        <p className="note">Note: Shelter in place, use mask when going out and think safety of others!</p>
+        <p className="note">Note: Shelter in place &#127960;, use mask 😷when going out and think safety 🤲 of others!</p>
       </Container>
     </Layout>
   );
