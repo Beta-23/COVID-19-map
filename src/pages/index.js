@@ -34,6 +34,7 @@ const IndexPage = () => {
       console.log('E', e);
       return;
     }
+    console.log('response', response);
   }
 
   const mapSettings = {
