@@ -29,13 +29,43 @@ const IndexPage = () => {
 
     let response;
     try {
-      response = await axios.get(`https://corona.lmao.ninja/countries`);
+      response = await axios.get('https://corona.lmao.ninja/countries');
     } catch(e) {
       console.log('E', e);
       return;
     }
-    console.log('response', response);
-  }
+    // console.log('response', response);
+    const { data = [] } = response;
+    const hasData = Array.isArray(data) && data.length > 0;
+
+    if ( !hasData ) return;
+  
+    const geoJson = {
+      type: 'FeatureCollection',
+      features: data.map((country = {}) => {
+        const { countryInfo = {} } = country;
+        const { lat, long: lng } = countryInfo;
+        return {
+          type: 'Feature',
+          properties: {
+            ...country,
+          },
+          geometry: {
+            type: 'Point',
+            coordinates: [ lng, lat ]
+          }
+        }
+      })
+    }
+
+    
+    const geoJsonLayers = new L.GeoJSON(geoJson, {
+      pointToLayer
+    });
+
+    geoJsonLayers.addTo(map);
+  } 
+  
 
   const mapSettings = {
     center: CENTER,
