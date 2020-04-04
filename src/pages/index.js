@@ -9,8 +9,8 @@ import Map from 'components/Map';
 
 
 const LOCATION = {
-  lat: 38.9072,
-  lng: -77.0369
+  lat: 0,
+  lng: 0
 };
 const CENTER = [LOCATION.lat, LOCATION.lng];
 const DEFAULT_ZOOM = 2;
@@ -120,18 +120,18 @@ const IndexPage = () => {
   return (
     <Layout pageName="home">
       <Helmet>
-        <title>Home Page</title>
+        <title>COVID-19 MAP</title>
       </Helmet>
 
       <Map {...mapSettings} />
 
       <Container type="content" className="text-center home-start">
-        <h2>Still Getting Started?</h2>
-        <p>Run the following in your terminal!</p>
+        <h2>COVID-19 MAP TRACKER</h2>
+        <p>Stay Up To Date</p>
         <pre>
-          <code>gatsby new [directory] https://github.com/colbyfayock/gatsby-starter-leaflet</code>
+          <code>More to come!</code>
         </pre>
-        <p className="note">Note: Gatsby CLI required globally for the above command</p>
+        <p className="note">Note: Shelter in place, use mask when going out and think safety of others!</p>
       </Container>
     </Layout>
   );
