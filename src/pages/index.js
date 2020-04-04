@@ -1,6 +1,7 @@
 import React from 'react';
 import Helmet from 'react-helmet';
 import L from 'leaflet';
+import axios from 'axios';
 
 import Layout from 'components/Layout';
 import Container from 'components/Container';
@@ -25,6 +26,14 @@ const IndexPage = () => {
 
   async function mapEffect({ leafletElement: map } = {}) {
     if ( !map ) return;
+
+    let response;
+    try {
+      response = await axios.get(`https://corona.lmao.ninja/countries`);
+    } catch(e) {
+      console.log('E', e);
+      return;
+    }
   }
 
   const mapSettings = {

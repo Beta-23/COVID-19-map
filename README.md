@@ -1,4 +1,7 @@
-# 🍃 Gatsby Leaflet Starter
+# COVID-19-map with Gatsby
+---
+
+## 🍃 Gatsby Leaflet Starter
 
 Jumpstart your next Gatsby mapping project with Leaflet!
 
@@ -16,6 +19,7 @@ Jumpstart your next Gatsby mapping project with Leaflet!
 ## Requirements
 * [Gatsby CLI](https://www.npmjs.com/package/gatsby-cli)
 * [Yarn](https://yarnpkg.com/en/)
+* [axios](https://www.npmjs.com/package/axios)
 
 ## Quick Start
 Run the following in your favorite terminal:
