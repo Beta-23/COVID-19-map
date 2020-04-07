@@ -8,10 +8,10 @@ const SecondPage = () => {
   return (
     <Layout pageName="two">
       <Helmet>
-        <title>Page Two</title>
+        <title>Resources</title>
       </Helmet>
       <Container type="content" className="text-center">
-        <h1>Page Two</h1>
+        <h1>Under Development</h1>
         <p>Welcome to page 2</p>
         <p>You just hit a route that doesn&#39;t exist yet... the sadness.</p>
       </Container>
