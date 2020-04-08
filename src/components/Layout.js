@@ -1,7 +1,11 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
+import { Global, css } from '@emotion/core';
 
+import { useTheme} from 'emotion-theming';
+
+import Context from '../hooks/context';
 import 'assets/stylesheets/application.scss';
 
 import Header from 'components/Header';
